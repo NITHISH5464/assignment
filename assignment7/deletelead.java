@@ -22,8 +22,9 @@ public class deletelead {
 	    driver.findElement(By.name("phoneCountryCode")).sendKeys("+91");
 	   // driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("91");
 	    driver.findElement(By.name("phoneCountryCode")).sendKeys("+91");
-	    driver.findElement(By.name("phoneCountryCode")).sendKeys("9750685464");
-	   driver.findElement(By.linkText("")
+	    driver.findElement(By.id("ext-gen270")).sendKeys("9750685464");
+	   driver.findElement(By.id("ext-gen334")).click();
+	   
 	    
 	    
 	       
