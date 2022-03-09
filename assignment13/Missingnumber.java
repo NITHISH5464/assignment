@@ -10,29 +10,22 @@ import java.util.TreeSet;
 
 public class Missingnumber {
 	public static void main(String[] args) {
-		Set<Integer> miss=new LinkedHashSet<Integer>();
-		miss.add(4);
-		miss.add(6);
-		miss.add(7);
-		miss.add(6);
-		miss.add(2);
-		miss.add(3);
-		miss.add(1);
-		miss.add(9);
-		miss.add(10);
-		miss.add(8);
-		miss.add(8);
-		miss.add(6);
-		//System.out.println(miss);
-		List<Integer> add=new ArrayList<Integer>(miss);
-		Collections.sort(add);
-		System.out.println(add);
-		//missing element
-		for (int i = 0; i <=add.size(); i++) {
-			System.out.println(i);
-			
-			
+		int[] input= {4,6,7,6,2,3,1,9,10,8,8,6};
+		Set<Integer> a=new TreeSet<Integer>();
+		for (int i = 0; i < input.length-1; i++) {
+			a.add(input[i]);			
 		}
 		
-		}
+	List<Integer> b=new ArrayList<Integer>();
+		b.addAll(a);
+    System.out.println(b);		
+    for (int i = 0; i <b.size()-1; i++) {
+		int missing=b.get(i+1)-b.get(i);
+       if(missing!=1) {
+    	   System.out.println("MIISING"+" "+(b.get(i+1)-1));
+       }
 	}
+	
+}	
+}		
+	

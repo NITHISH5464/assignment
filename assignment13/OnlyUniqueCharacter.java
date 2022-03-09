@@ -6,16 +6,13 @@ import java.util.Set;
 public class OnlyUniqueCharacter {
 	public static void main(String[] args) {
 		String input="babub";
-	    char[] name = input.toCharArray();
-	//System.out.println(name);
-	Set<Character> cra=new HashSet<Character>();
-	cra.add('b');
-	cra.add('a');
-	cra.add('b');
-	cra.add('u');
-	cra.add('b');
-	cra.remove('b');
-	System.out.println(cra);
+	 
+	Set<Character> dup=new HashSet<Character>();
+	for (int i = 0; i < input.length()-1; i++) {
+		dup.add(input.charAt(i));
+	}
+	dup.remove('b');
+   System.out.println(dup);
 	}
 
 }
